@@ -1,3 +1,0 @@
-NEBULA CLEAN 1.2.0
-Windows desktop release source package.
-See README-v1.2.0-RU.md for feature notes, server deployment requirements and build instructions.
