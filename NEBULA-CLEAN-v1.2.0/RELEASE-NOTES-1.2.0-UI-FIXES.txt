@@ -1,0 +1,10 @@
+NEBULA CLEAN 1.2.0 — UI fixes
+
+- Promo code input enlarged and switched to high-contrast light field; activation button enlarged.
+- Chat input enlarged and high-contrast.
+- Emoji picker is now toggled by a dedicated button and uses colorful emoji buttons rather than always showing a horizontal row.
+- Chat list now binds message objects, displays avatar/prefix/email/time/content, and selecting a message shows a basic profile dialog with prefix and FREE/ADMIN role.
+- Chat API now returns each sender's role so admin status can be displayed.
+- Language selection now updates sidebar navigation, page overview labels, language label, promo action, refresh/send/logout labels and saves the selected language.
+
+Known limitations: language coverage is still partial; some detailed page text remains Russian. Voice recording and photo sending are not implemented in this build yet. Full build/runtime verification requires Windows with .NET 10 SDK and deployment of the updated server code.

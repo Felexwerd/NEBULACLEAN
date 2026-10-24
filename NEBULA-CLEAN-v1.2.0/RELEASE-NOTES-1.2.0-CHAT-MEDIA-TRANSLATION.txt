@@ -1,0 +1,23 @@
+NEBULA CLEAN 1.2.0 — CHAT MEDIA & TRANSLATION UPDATE
+
+Client changes:
+- Added voice recording to WAV and send-to-chat flow (microphone permission/device required).
+- Added photo selection and upload to chat (5 MB client-side limit).
+- Media messages can be opened/played by double-clicking the message; uses the Windows default viewer/player.
+- Chat message items show each sender's uploaded avatar when available; clicking the avatar opens a profile card with email, prefix and FREE/ADMIN role. The card displays the actual uploaded avatar when available.
+- Added a first-pass translation map for key labels and pages in English, Russian, Belarusian and Ukrainian.
+- Chat input uses the dark NEBULA theme.
+
+Server changes:
+- Chat endpoint accepts text, image and audio message types, validates data URL types and enforces payload limits.
+- Message type is saved in the existing chat_messages table; no schema migration is needed.
+
+Build requirements:
+- .NET 10 SDK and Windows desktop workload.
+- NAudio 2.2.1 package is restored through NuGet.
+- Deploy the updated NebulaServer/Program.cs to the configured backend for media messages to work for all users.
+
+Known limitations:
+- This environment does not include the .NET SDK, so a full build/run test was not possible here.
+- Translation coverage has been expanded across major screens but dynamic server errors and some less common labels may still remain untranslated.
+- Voice messages require a working microphone and Windows default WAV player. Media is stored as base64 in the chat database, so storage usage can grow; this is suitable for a small chat but should later be moved to file/object storage for scale.
